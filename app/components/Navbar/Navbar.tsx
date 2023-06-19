@@ -20,21 +20,12 @@ const Navbar = () => {
             <div
                 className={`${
                     isOpen ? "block md:hidden" : "hidden"
-                } fixed z-50 bg-neutral-800/70 inset-0 `}
+                } fixed z-50 bg-neutral-800/70  inset-0 `}
             >
                 <div
+                    style={{ transition: "all 0.3s ease-in-out" }}
                     className={`
-                    translate
-            duration-300
-            h-full
-            ${
-                isOpen
-                    ? "translate-y-0 opacity-100"
-                    : "translate-y-full opacity-0"
-            }
-            
-                    
-        w-4/6 pt-20 pl-8 gap-4 h-full bg-white flex flex-col text-xl font-semibold relative
+                    translate duration-300 w-4/6 pt-20 pl-8 gap-4 h-full bg-white flex flex-col text-xl font-semibold relative sm:text-blue-grayishBlue
         
 
         `}
@@ -101,7 +92,7 @@ const Navbar = () => {
                         />
                     </div>
                 </div>
-                <hr />
+                <hr className="border hidden md:block border-blue-grayishBlue" />
             </Container>
         </>
     );
